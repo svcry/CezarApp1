@@ -27,13 +27,13 @@ namespace CezarApp1
         {
             if (string.IsNullOrWhiteSpace(encryptedTextBox.Text))
             {
-                MessageBox.Show("The ciphertext and key fields cannot be empty.");
+                MessageBox.Show("The ciphertext and key fields cannot be empty.", "Error");
                 return;
             }
 
             if (!int.TryParse(keyTextBox.Text, out int key))
             {
-                MessageBox.Show("The key must be an integer.");
+                MessageBox.Show("The key must be an integer.", "Error");
                 return;
             }
 
@@ -46,12 +46,12 @@ namespace CezarApp1
         {
             if (string.IsNullOrWhiteSpace(plaintextTextBox.Text) || string.IsNullOrWhiteSpace(keyTextBox.Text))
             {
-                MessageBox.Show("The plaintext and key fields cannot be empty.");
+                MessageBox.Show("The plaintext and key fields cannot be empty.", "Error");
                 return;
             }
             if (!int.TryParse(keyTextBox.Text, out int key))
             {
-                MessageBox.Show("The key must be an integer.");
+                MessageBox.Show("The key must be an integer.", "Error");
                 return;
             }
             string plaintext = plaintextTextBox.Text;
@@ -63,7 +63,7 @@ namespace CezarApp1
         {
             if (string.IsNullOrWhiteSpace(plaintextTextBox.Text) || string.IsNullOrWhiteSpace(encryptedTextBox.Text))
             {
-                MessageBox.Show("The plaintext and ciphertext fields cannot be empty.");
+                MessageBox.Show("The plaintext and ciphertext fields cannot be empty.", "Error");
                 return;
             }
             string plaintext = plaintextTextBox.Text;
@@ -76,7 +76,7 @@ namespace CezarApp1
         {
             if (string.IsNullOrWhiteSpace(encryptedTextBox.Text))
             {
-                MessageBox.Show("The ciphertext field cannot be empty.");
+                MessageBox.Show("The ciphertext field cannot be empty.", "Error");
                 return;
             }
             //var progressDialog = await DialogManager.ShowProgressAsync("Атака", "Идет атака...");

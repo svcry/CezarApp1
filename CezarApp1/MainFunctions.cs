@@ -72,12 +72,12 @@ namespace CezarApp1
 
                 if (searchResults.Count > 0)
                 {
-                    potentialSolutions.Add(new TextVariables { textVar = decryptedText, keyVar = key });
+                    potentialSolutions.Add(new TextVariables { textVar = decryptedText + "- This word exists in the dictionary", keyVar = key });
                 }
-                /*else
+                else
                 {
-                    potentialSolutions.Add(new TextVariables { textVar = decryptedText + " (No Latin words found)", keyVar = key });
-                }*/
+                    potentialSolutions.Add(new TextVariables { textVar = decryptedText + " - There is no such word in the dictionary", keyVar = key });
+                }
             }
 
             return potentialSolutions.ToArray();
