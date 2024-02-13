@@ -1,0 +1,30 @@
+﻿<Window x:Class="CezarApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Caesar Cipher App" Height="420" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Cipher key:" Margin="5"/>
+        <TextBox x:Name="keyTextBox" Grid.Row="1" Margin="5"/>
+
+        <TextBlock Grid.Row="2" Text="Plaintext:" Margin="5"/>
+        <TextBox x:Name="plaintextTextBox" Grid.Row="3" Margin="5"/>
+
+        <TextBlock Grid.Row="4" Text="Ciphertext:" Margin="5"/>
+        <TextBox x:Name="encryptedTextBox" Grid.Row="4" Margin="4,27,6,-17"/>
+
+        <Button Content="Encrypt" Click="EncryptButton_Click" Grid.Row="4" Margin="6,54,6,-42"/>
+        <Button Content="Decrypt" Click="DecryptButton_Click" Grid.Row="4" Margin="6,83,6,-73"/>
+        <Button Content="Detect key" Click="DetectKeyButton_Click" Grid.Row="4" Margin="6,112,6,-102"/>
+        <Button Content="Attack cipher" Click="AttackButton_Click" Grid.Row="4" Margin="6,141,6,-131"/>
+    </Grid>
+
+</Window>
+
